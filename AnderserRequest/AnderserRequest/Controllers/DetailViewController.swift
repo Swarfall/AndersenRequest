@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var loadingProgressView: UIProgressView!
     
     var requestParametrModel = RequestParametrModel()
-    let user = UserModel()
+    var user = UserModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
                         if result.count > 0 {
                             
                             for info in result {
-                                
+
                                 if let login = info["login"] as? [String: Any] {
                                     if let uuid = login["uuid"] as? String {
                                         if uuid == self.user.uuid {

@@ -113,7 +113,7 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        vc.user.uuid = userModel[indexPath.row].uuid
+        vc.user = userModel[indexPath.row]
         print(userModel[indexPath.row].uuid ?? "")
         self.navigationController?.pushViewController(vc, animated: true)
     }
