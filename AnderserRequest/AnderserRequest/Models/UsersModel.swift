@@ -17,5 +17,4 @@ class UserModel {
     var email: String?
     var country: String?
     var city: String?
-    var uuid: String?
 }

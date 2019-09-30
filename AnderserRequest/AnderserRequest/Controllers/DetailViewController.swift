@@ -20,50 +20,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getData()
+        showImage(image: user.largeImage ?? "")
     }
-    
-    private func getData() {
-        let urlString = "\(requestParametrModel.randomRequestURL)\(requestParametrModel.allResults))"
-            guard let url = URL(string: urlString) else { return }
-            
-            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-                guard let data = data else { return }
-                
-                do {
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        if let result = json["results"] as? [[String: Any]] {
-                        if result.count > 0 {
-                            
-                            for info in result {
 
-                                if let login = info["login"] as? [String: Any] {
-                                    if let uuid = login["uuid"] as? String {
-                                        if uuid == self.user.uuid {
-                                            
-                                            if let avatar = info["picture"] as? [String: Any] {
-                                                if let image = avatar["large"] as? String {
-                                                    self.user.largeImage = image
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                            DispatchQueue.main.async {
-                                guard let avatar = self.user.largeImage else { return }
-                                self.showImage(image: avatar)
-                            }
-                        }
-                    }
-                } catch let error as NSError {
-                    debugPrint("Error: \(error.localizedDescription)")
-                }
-            }
-            task.resume()
-        }
-    
     private func showImage(image: String) {
         let imageURL = URL(string: image)
         self.avatarImageView.kf.indicatorType = .activity

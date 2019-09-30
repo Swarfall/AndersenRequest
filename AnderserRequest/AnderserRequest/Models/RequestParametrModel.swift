@@ -11,6 +11,5 @@ import Foundation
 class RequestParametrModel {
     
     let randomRequestURL = "https://randomuser.me/api/?"
-    var results = "results=20"
-    var allResults = "results=5000"
+    var resultsCount = "results=20"
 }

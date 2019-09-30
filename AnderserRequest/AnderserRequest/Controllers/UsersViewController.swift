@@ -29,7 +29,7 @@ class UsersViewController: UIViewController {
     }
     
     private func getData() {
-        let urlString = "\(requestParametrModel.randomRequestURL)\(requestParametrModel.results)"
+        let urlString = "\(requestParametrModel.randomRequestURL)\(requestParametrModel.resultsCount)"
             guard let url = URL(string: urlString) else { return }
             
             let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
@@ -45,8 +45,11 @@ class UsersViewController: UIViewController {
                                 let user = UserModel()
                                 
                                 if let avatar = data["picture"] as? [String: Any] {
-                                    if let image = avatar["thumbnail"] as? String {
-                                        user.thumbnailImage = image
+                                    if let thumbnail = avatar["thumbnail"] as? String {
+                                        user.thumbnailImage = thumbnail
+                                    }
+                                    if let large = avatar["large"] as? String {
+                                        user.largeImage = large
                                     }
                                 }
                                 
@@ -69,12 +72,6 @@ class UsersViewController: UIViewController {
                                     }
                                     if let city = location["city"] as? String {
                                         user.city = city
-                                    }
-                                }
-                                
-                                if let login = data["login"] as? [String: Any] {
-                                    if let uuid = login["uuid"] as? String {
-                                        user.uuid = uuid
                                     }
                                 }
                                 
@@ -114,7 +111,6 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         vc.user = userModel[indexPath.row]
-        print(userModel[indexPath.row].uuid ?? "")
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
