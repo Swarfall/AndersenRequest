@@ -1,0 +1,6 @@
+framework module Pods_AnderserRequest {
+  umbrella header "Pods-AnderserRequest-umbrella.h"
+
+  export *
+  module * { export * }
+}
