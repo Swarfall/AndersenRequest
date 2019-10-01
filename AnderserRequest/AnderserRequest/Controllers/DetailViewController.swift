@@ -7,34 +7,25 @@
 //
 
 import UIKit
-import Kingfisher
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var loadingProgressView: UIProgressView!
     
-    var requestParametrModel = RequestParametrModel()
     var user = UserModel()
     
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
-
-        showImage(image: user.largeImage ?? "")
-    }
-
-    private func showImage(image: String) {
-        let imageURL = URL(string: image)
-        self.avatarImageView.kf.indicatorType = .activity
-        self.avatarImageView.kf.setImage(with: imageURL)
+    
+        avatarImageView.downloaded(from: "http://www.rosphoto.com/images/u/articles/1604/3_19.jpg")
     }
         
     @IBAction func didTapCancelLoadingButton(_ sender: Any) {
-        
+        avatarImageView.cancel(from: "http://www.rosphoto.com/images/u/articles/1604/3_19.jpg")
     }
     
     @IBAction func didTapPushPopVCButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
 }
-

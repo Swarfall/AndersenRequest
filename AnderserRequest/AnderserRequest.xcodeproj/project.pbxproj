@@ -20,6 +20,7 @@
 		84B3A8ED2341E3B1001ECFC5 /* UsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B3A8EB2341E3B1001ECFC5 /* UsersCell.xib */; };
 		84B3A8F02341EE91001ECFC5 /* RequestParametrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A8EF2341EE91001ECFC5 /* RequestParametrModel.swift */; };
 		84B3A8F223420EB6001ECFC5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A8F123420EB6001ECFC5 /* DetailViewController.swift */; };
+		84F8899B234376E100B8CF85 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8899A234376E100B8CF85 /* Downloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		84B3A8EB2341E3B1001ECFC5 /* UsersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersCell.xib; sourceTree = "<group>"; };
 		84B3A8EF2341EE91001ECFC5 /* RequestParametrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParametrModel.swift; sourceTree = "<group>"; };
 		84B3A8F123420EB6001ECFC5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		84F8899A234376E100B8CF85 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		CCC09CC823A6A59C5DAF2506 /* Pods_AnderserRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnderserRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			children = (
 				84B3A8E82341E39D001ECFC5 /* UsersModel.swift */,
 				84B3A8EF2341EE91001ECFC5 /* RequestParametrModel.swift */,
+				84F8899A234376E100B8CF85 /* Downloader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				84B3A8CF2341E2FF001ECFC5 /* AppDelegate.swift in Sources */,
 				84B3A8E92341E39D001ECFC5 /* UsersModel.swift in Sources */,
 				84B3A8F02341EE91001ECFC5 /* RequestParametrModel.swift in Sources */,
+				84F8899B234376E100B8CF85 /* Downloader.swift in Sources */,
 				84B3A8EC2341E3B1001ECFC5 /* UsersCell.swift in Sources */,
 				84B3A8D12341E2FF001ECFC5 /* SceneDelegate.swift in Sources */,
 				84B3A8F223420EB6001ECFC5 /* DetailViewController.swift in Sources */,
@@ -332,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -386,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -410,7 +414,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Viacheslav-Savitsky.AnderserRequest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -429,7 +433,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Viacheslav-Savitsky.AnderserRequest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
