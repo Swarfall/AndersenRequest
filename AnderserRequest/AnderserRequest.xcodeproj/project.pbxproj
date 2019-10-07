@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		30EEA34C5B7D7E929B00D466 /* Pods_AnderserRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC09CC823A6A59C5DAF2506 /* Pods_AnderserRequest.framework */; };
+		842B8F032345E3D3004914A0 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F022345E3D3004914A0 /* ImageModel.swift */; };
+		842B8F082345E7A7004914A0 /* GSDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F072345E7A7004914A0 /* GSDViewController.swift */; };
+		842B8F0B2345E7FD004914A0 /* GCDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F092345E7FD004914A0 /* GCDCell.swift */; };
+		842B8F0C2345E7FD004914A0 /* GCDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842B8F0A2345E7FD004914A0 /* GCDCell.xib */; };
+		8461400F23475390002EEA04 /* TESTGSDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461400E23475390002EEA04 /* TESTGSDViewController.swift */; };
 		84B3A8CF2341E2FF001ECFC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A8CE2341E2FF001ECFC5 /* AppDelegate.swift */; };
 		84B3A8D12341E2FF001ECFC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A8D02341E2FF001ECFC5 /* SceneDelegate.swift */; };
 		84B3A8D32341E2FF001ECFC5 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A8D22341E2FF001ECFC5 /* UsersViewController.swift */; };
@@ -21,11 +26,17 @@
 		84B3A8F02341EE91001ECFC5 /* RequestParametrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A8EF2341EE91001ECFC5 /* RequestParametrModel.swift */; };
 		84B3A8F223420EB6001ECFC5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A8F123420EB6001ECFC5 /* DetailViewController.swift */; };
 		84F8899B234376E100B8CF85 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8899A234376E100B8CF85 /* Downloader.swift */; };
+		84F8F85A2346210000D71723 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8F8592346210000D71723 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		46A7D94B3F417A9FDB90DBF0 /* Pods-AnderserRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnderserRequest.release.xcconfig"; path = "Target Support Files/Pods-AnderserRequest/Pods-AnderserRequest.release.xcconfig"; sourceTree = "<group>"; };
 		73C24299B3665145285F41B8 /* Pods-AnderserRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnderserRequest.debug.xcconfig"; path = "Target Support Files/Pods-AnderserRequest/Pods-AnderserRequest.debug.xcconfig"; sourceTree = "<group>"; };
+		842B8F022345E3D3004914A0 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		842B8F072345E7A7004914A0 /* GSDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSDViewController.swift; sourceTree = "<group>"; };
+		842B8F092345E7FD004914A0 /* GCDCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDCell.swift; sourceTree = "<group>"; };
+		842B8F0A2345E7FD004914A0 /* GCDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GCDCell.xib; sourceTree = "<group>"; };
+		8461400E23475390002EEA04 /* TESTGSDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTGSDViewController.swift; sourceTree = "<group>"; };
 		84B3A8CB2341E2FF001ECFC5 /* AnderserRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnderserRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3A8CE2341E2FF001ECFC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B3A8D02341E2FF001ECFC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +52,7 @@
 		84B3A8EF2341EE91001ECFC5 /* RequestParametrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParametrModel.swift; sourceTree = "<group>"; };
 		84B3A8F123420EB6001ECFC5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		84F8899A234376E100B8CF85 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		84F8F8592346210000D71723 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		CCC09CC823A6A59C5DAF2506 /* Pods_AnderserRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnderserRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +76,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		842B8EFE2345E387004914A0 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				842B8EFF2345E3A7004914A0 /* Model */,
+				842B8F002345E3AE004914A0 /* Cell */,
+				842B8F012345E3B3004914A0 /* Controller */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		842B8EFF2345E3A7004914A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				842B8F022345E3D3004914A0 /* ImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		842B8F002345E3AE004914A0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				842B8F092345E7FD004914A0 /* GCDCell.swift */,
+				842B8F0A2345E7FD004914A0 /* GCDCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		842B8F012345E3B3004914A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				842B8F072345E7A7004914A0 /* GSDViewController.swift */,
+				8461400E23475390002EEA04 /* TESTGSDViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		842B8F042345E754004914A0 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				84B3A8E72341E31B001ECFC5 /* Models */,
+				84B3A8E62341E312001ECFC5 /* Cells */,
+				84B3A8E52341E30B001ECFC5 /* Controllers */,
+				84B3A8D42341E2FF001ECFC5 /* Main.storyboard */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
 		84B3A8C22341E2FE001ECFC5 = {
 			isa = PBXGroup;
 			children = (
@@ -85,16 +144,15 @@
 		84B3A8CD2341E2FF001ECFC5 /* AnderserRequest */ = {
 			isa = PBXGroup;
 			children = (
-				84B3A8E72341E31B001ECFC5 /* Models */,
-				84B3A8E62341E312001ECFC5 /* Cells */,
-				84B3A8E52341E30B001ECFC5 /* Controllers */,
+				842B8F042345E754004914A0 /* URLSession */,
 				84B3A8CE2341E2FF001ECFC5 /* AppDelegate.swift */,
 				84B3A8D02341E2FF001ECFC5 /* SceneDelegate.swift */,
-				84B3A8D42341E2FF001ECFC5 /* Main.storyboard */,
+				842B8EFE2345E387004914A0 /* GCD */,
 				84B3A8DA2341E301001ECFC5 /* Assets.xcassets */,
 				84B3A8DC2341E301001ECFC5 /* LaunchScreen.storyboard */,
 				84B3A8DF2341E301001ECFC5 /* Info.plist */,
 				84B3A8D72341E2FF001ECFC5 /* AnderserRequest.xcdatamodeld */,
+				84F8F8592346210000D71723 /* TestViewController.swift */,
 			);
 			path = AnderserRequest;
 			sourceTree = "<group>";
@@ -196,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842B8F0C2345E7FD004914A0 /* GCDCell.xib in Resources */,
 				84B3A8ED2341E3B1001ECFC5 /* UsersCell.xib in Resources */,
 				84B3A8DE2341E301001ECFC5 /* LaunchScreen.storyboard in Resources */,
 				84B3A8DB2341E301001ECFC5 /* Assets.xcassets in Resources */,
@@ -253,13 +312,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B3A8D32341E2FF001ECFC5 /* UsersViewController.swift in Sources */,
+				8461400F23475390002EEA04 /* TESTGSDViewController.swift in Sources */,
+				842B8F032345E3D3004914A0 /* ImageModel.swift in Sources */,
+				842B8F082345E7A7004914A0 /* GSDViewController.swift in Sources */,
 				84B3A8D92341E2FF001ECFC5 /* AnderserRequest.xcdatamodeld in Sources */,
 				84B3A8CF2341E2FF001ECFC5 /* AppDelegate.swift in Sources */,
+				84F8F85A2346210000D71723 /* TestViewController.swift in Sources */,
 				84B3A8E92341E39D001ECFC5 /* UsersModel.swift in Sources */,
 				84B3A8F02341EE91001ECFC5 /* RequestParametrModel.swift in Sources */,
 				84F8899B234376E100B8CF85 /* Downloader.swift in Sources */,
 				84B3A8EC2341E3B1001ECFC5 /* UsersCell.swift in Sources */,
 				84B3A8D12341E2FF001ECFC5 /* SceneDelegate.swift in Sources */,
+				842B8F0B2345E7FD004914A0 /* GCDCell.swift in Sources */,
 				84B3A8F223420EB6001ECFC5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,10 +15,16 @@ class UsersViewController: UIViewController {
     var userModel: [UserModel] = []
     var requestParametrModel = RequestParametrModel()
     var user = UserModel()
+    let methodStart = Date()
+    let methodFinish = Date()
+    var executionTime = TimeInterval()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        executionTime = methodFinish.timeIntervalSince(methodStart)
         tableView.register(UINib(nibName: "UsersCell", bundle: nil), forCellReuseIdentifier: "UsersCell")
         
         tableView.delegate = self
@@ -31,19 +37,21 @@ class UsersViewController: UIViewController {
     private func getData() {
         let urlString = "\(requestParametrModel.randomRequestURL)\(requestParametrModel.resultsCount)"
             guard let url = URL(string: urlString) else { return }
-            
-            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
                 guard let data = data else { return }
-                
+
                 do {
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                    {
                         if let result = json["results"] as? [[String: Any]] {
                         if result.count > 0 {
-                            
+
                             for data in result {
-                                
+
                                 let user = UserModel()
-                                
+
                                 if let avatar = data["picture"] as? [String: Any] {
                                     if let thumbnail = avatar["thumbnail"] as? String {
                                         user.thumbnailImage = thumbnail
@@ -52,7 +60,7 @@ class UsersViewController: UIViewController {
                                         user.largeImage = large
                                     }
                                 }
-                                
+
                                 if let name = data["name"] as? [String: Any] {
                                     if let firstName = name["first"] as? String {
                                         user.name = firstName
@@ -61,11 +69,11 @@ class UsersViewController: UIViewController {
                                         user.surname = lastName
                                     }
                                 }
-                                
+
                                 if let email = data["email"] as? String {
                                     user.email = email
                                 }
-                                
+
                                 if let location = data["location"] as? [String: Any] {
                                     if let country = location["country"] as? String {
                                         user.country = country
@@ -74,11 +82,12 @@ class UsersViewController: UIViewController {
                                         user.city = city
                                     }
                                 }
-                                
+
                                 self.userModel.append(user)
                             }
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                print("Execution time: \(self.executionTime)")
                             }
                         }
                         }
